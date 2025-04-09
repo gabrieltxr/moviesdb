@@ -1,1 +1,2 @@
 # moviesdb
+This project uses PostgreSQL as the database management system to store information about movies, such as title, director, genre, and release year. The integration with the database is done using Python and the Flask framework to structure the application's backend. Communication between Python and the database is handled through the psycopg2 library, which allows executing SQL commands directly from the application. The project focuses on hands-on learning of the interaction between Flask, PostgreSQL, and psycopg2 in a real-world data management scenario.
