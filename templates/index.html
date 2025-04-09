@@ -35,6 +35,12 @@
       border-radius: 5px;
       width: 300px;
     }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
     button {
       padding: 10px 16px;
@@ -61,9 +67,16 @@
     <!--<img src="{{ url_for('static', filename='logo.png') }}" alt="Logo MoviesDB" style="max-width: 750px; margin-bottom: 20px;">-->
     <h1>MoviesDB</h1>
     <form class="search-box" action="/buscar" method="GET">
+      <select name="coluna">
+        <option value="titulo">Título</option>
+        <option value="ano">Ano de Lançamento</option>
+        <option value="diretor">Nota IMDB</option>
+        <option value="genero">Gênero</option>
+      </select>
       <input type="text" name="q" placeholder="Digite sua busca...">
       <button type="submit">Buscar</button>
     </form>
+    
     {% if resultados %}
   <h2>Resultados da busca:</h2>
   <table style="margin: auto; border-collapse: collapse;">
