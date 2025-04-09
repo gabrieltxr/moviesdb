@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com Barra de Pesquisa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!--<img src="{{ url_for('static', filename='logo.png') }}" alt="Logo MoviesDB" style="max-width: 750px; margin-bottom: 20px;">-->
+    <h1>MoviesDB</h1>
+    <form class="search-box" action="/buscar" method="GET">
+      <input type="text" name="q" placeholder="Digite sua busca...">
+      <button type="submit">Buscar</button>
+    </form>
+    {% if resultados %}
+  <h2>Resultados da busca:</h2>
+  <table style="margin: auto; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="padding: 8px; border: 1px solid #ccc;">Título</th>
+        <th style="padding: 8px; border: 1px solid #ccc;">Nota IMDB</th>
+        <th style="padding: 8px; border: 1px solid #ccc;">Ano de Lançamento</th>
+        <th style="padding: 8px; border: 1px solid #ccc;">Gênero</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for titulo, ano, diretor, genero in resultados %}
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ titulo }}</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ ano }}</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ diretor }}</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ genero }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% elif termo %}
+  <p>Nenhum filme encontrado com esse nome. Tente novamente.</p>
+{% endif %}
+
+  </div>
+</body>
+</html>
