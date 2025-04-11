@@ -3,7 +3,6 @@ import psycopg2
 
 app = Flask(__name__)
 
-# Configuração da conexão com PostgreSQL
 conn = psycopg2.connect(
     dbname='MoviesDB',
     user='postgres',
@@ -43,7 +42,7 @@ def buscar():
     cur.execute(query, (f'%{termo}%',))
     resultados = cur.fetchall()
     cur.close()
-
+    resultados = sorted(resultados, key=lambda x: x[0])
     return render_template('index.html', resultados=resultados, termo=termo)
 
 
