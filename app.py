@@ -22,7 +22,7 @@ def buscar():
 
     cur = conn.cursor()
     print(f"Termo pesquisado: {termo}")
-    query = "SELECT movie_name, imdb_score, movie_year, movie_genre FROM movies WHERE movie_name ILIKE %s"
+    query = "SELECT movie_name, imdb_score, movie_year, movie_genre, movie_director FROM movies WHERE movie_name ILIKE %s"
     cur.execute(query, (f'%{termo}%',))
     resultados = cur.fetchall()
     cur.close()
