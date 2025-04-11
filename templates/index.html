@@ -87,15 +87,17 @@
         <th style="padding: 8px; border: 1px solid #ccc;">Nota IMDB</th>
         <th style="padding: 8px; border: 1px solid #ccc;">Ano de Lançamento</th>
         <th style="padding: 8px; border: 1px solid #ccc;">Gênero</th>
+        <th style="padding: 8px; border: 1px solid #ccc;">Diretor</th>
       </tr>
     </thead>
     <tbody>
-      {% for titulo, ano, diretor, genero in resultados %}
+      {% for titulo, ano, nota, genero, diretor in resultados %}
         <tr>
           <td style="padding: 8px; border: 1px solid #ccc;">{{ titulo }}</td>
           <td style="padding: 8px; border: 1px solid #ccc;">{{ ano }}</td>
-          <td style="padding: 8px; border: 1px solid #ccc;">{{ diretor }}</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ nota }}</td>
           <td style="padding: 8px; border: 1px solid #ccc;">{{ genero }}</td>
+          <td style="padding: 8px; border: 1px solid #ccc;">{{ diretor }}</td>
         </tr>
       {% endfor %}
     </tbody>
