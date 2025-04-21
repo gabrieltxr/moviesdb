@@ -21,7 +21,7 @@ def index():
 def buscar_filme_por_id(id):
     cur = conn.cursor()
     cur.execute("""
-        SELECT id, movie_name, imdb_score, movie_year, movie_genre, movie_director
+        SELECT id, movie_name, imdb_score, movie_year, movie_genre, movie_director, movie_sinopse
         FROM movies
         WHERE id = %s
     """, (id,))
@@ -40,7 +40,8 @@ def buscar():
         'ano': 'movie_year',
         'nota': 'imdb_score',
         'genero': 'movie_genre',
-        'diretor': 'movie_director'
+        'diretor': 'movie_director',
+        'sinopse': 'movie_sinopse'
     }
 
     coluna_banco = colunas_mapeadas.get(coluna, 'movie_name')
@@ -49,7 +50,7 @@ def buscar():
     print(f"Pesquisando por '{termo}' na coluna '{coluna_banco}'")
 
     query = f"""
-        SELECT id, movie_name, imdb_score, movie_year, movie_genre, movie_director
+        SELECT id, movie_name, imdb_score, movie_year, movie_genre, movie_director, movie_sinopse
         FROM movies
         WHERE {coluna_banco}::text ILIKE %s
     """
