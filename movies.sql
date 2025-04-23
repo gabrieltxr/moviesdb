@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-04-22 22:02:35
+-- Started on 2025-04-23 17:08:41
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -163,6 +163,9 @@ COPY public.movies (id, movie_name, imdb_score, movie_year, movie_genre, movie_d
 167	Spotlight: Segredos Revelados	8.1	2015	Crime,Drama	Tom McCarthy	A verdadeira historia de como o jornal Boston Globe revelou o escândalo de abuso sexual infantil dentro da igreja católica da cidade e que agitou a toda igreja católica no mundo.
 168	Star Wars: Episódio IV - Uma Nova Esperança	8.6	1977	Aventura,Space Sci-Fi,Ação	George Lucas	Luke Skywalker une forças com um cavaleiro Jedi, um piloto arrogante, um Wookiee e dois andróides para salvar a galáxia da estação de batalha destruidora do Império, enquanto tenta resgatar a Princesa Leia do misterioso Darth Vader.
 169	Star Wars: Episódio V - O Império Contra-Ataca	8.7	1980	Aventura,Space Sci-Fi,Ação	Irvin Kershner	Depois que a Aliança Rebelde é dominada pelo Império, Luke Skywalker começa seu treinamento Jedi com Yoda, enquanto seus amigos são perseguidos por toda a galáxia por Darth Vader e pelo caçador de recompensas Boba Fett.
+205	Flow	7.9	2024	Animação,Aventura	Gints Zilbalodis	Gato é um animal solitário, mas quando seu lar é destruído por uma grande inundação, ele encontra refúgio em um barco habitado por diversas espécies, tendo que se juntar a eles apesar das diferenças.
+206	Gladiador II	6.5	2024	Ação,Aventura,Drama	Ridley Scott	Após ter seu lar conquistado pelos imperadores tirânicos que agora comandam Roma, Lucius é forçado a entrar no Coliseu e deve olhar para o seu passado para encontrar força para devolver a glória de Roma ao seu povo.
+207	Harry Potter e a Pedra Filosofal	7.7	2001	Aventura	Chris Columbus	Harry Potter é um garoto que, após a misteriosa morte dos pais, mora com os tios. Harry leva uma vida de privações, mas sua história muda de rumo quando completa 11 anos e descobre ser um bruxo, ingressando na escola de magia de Hogwarts.
 34	Clube da Luta	8.8	1999	Drama Psicológico,Thriller,Drama	David Fincher	Um trabalhador de escritório e um fabricante de sabonetes formam um clube de luta clandestino que evolui para algo muito maior.
 37	Crepúsculo dos Deuses	8.4	1950	Comédia Negra,Drama Psicológico	Billy Wilder	Um roteirista estabelece uma relação com uma fracasada estrela de cinema que quer voltar aos filmes.
 39	Céu e Inferno	8.4	1963	Crime,Drama,Thriller	Akira Kurosawa	Um executivo de uma empresa de calçados torna-se vítima de extorsão quando o filho de seu motorista é sequestrado e retido para resgate.
@@ -235,6 +238,35 @@ COPY public.movies (id, movie_name, imdb_score, movie_year, movie_genre, movie_d
 185	Whiplash	8.5	2014	Drama Psicológico,Drama	Damien Chazelle	Um jovem e promissor baterista se matricula em um conservatório de música onde seus sonhos são guiados por um instrutor que não pára por nada para perceber o potencial de um aluno.
 186	Yojimbo, o Guarda-Costas	8.2	1961	Ação,Drama,Thriller	Akira Kurosawa	Um astuto ronin chega a uma cidade dividida por duas quadrilhas criminosas e decide se confrontar para libertar a cidade.
 187	À Espera de um Milagre	8.6	1999	Crime,Drama	Frank Darabont	As vidas dos guardas de corredor da morte são afetadas por um dos detidos: um homem afro-americano acusado pelo assassinato e estupro de uma criança, mas com um presente misterioso.
+198	Clube dos Cinco	7.8	1985	Comédia,Drama	John Hughes	Cinco estudantes se conhecem numa detenção um sábado ed escobrem que tem muitas coisas en comuns.
+190	A Paixão de Cristo	7.2	2004	Drama	Mel Gibson	Representa as últimas doze horas da vida de Jesus de Nazaré, no dia da sua crucificação em Jerusalém.
+192	A Verdadeira Dor	7.1	2024	Comédia,Drama	Jesse Eisenberg	Dois primos que não se dão bem se reúnem para uma excursão pela Polônia para homenagear sua amada avó. A aventura toma um rumo diferente quando as antigas tensões deles ressurgem contra o pano de fundo de sua história familiar.
+188	A Mulher no Jardim	5.1	2025	Drama,Horror,Thriller	Jaume Collet-Serra	Uma mulher misteriosa aparece repetidamente no jardim de uma família, muitas vezes entregando avisos assustadores e mensagens perturbadoras, fazendo-os questionar sua identidade, motivos e o perigo potencial que ela pode representar.
+189	A Ordem	6.8	2024	Crime,Drama,Thriller	Justin Kurzel	Uma série de assaltos a bancos e carros-fortes assustou as comunidades do noroeste do Pacífico. Um agente solitário do FBI acredita que os crimes não foram obra de criminosos com motivação financeira.
+191	A Substância	7.3	2024	Comédia Negra,Horror,Drama,Sci-Fi	Coralie Fargeat	Uma celebridade em decadência decide usar uma droga do mercado negro, uma substância que replica células e cria temporariamente uma versão mais jovem e melhor de si mesma.
+193	A Vida de Chuck	7.6	2024	Drama,Sci-Fi	Mike Flanagan	Uma história de afirmação da vida e de mudança de gênero baseada no romance de Stephen King sobre três capítulos da vida de um homem comum chamado Charles Krantz.
+194	Acompanhante Perfeita	7.0	2025	Comédia Negra,Thriller,Sci-Fi	Drew Hancock	Um fim de semana entre amigos em uma cabana remota se transforma em caos após a revelação de que um dos hóspedes não é o que parece.
+195	Alien: Romulus	7.1	2024	Sci-Fi,Horror,Thriller	Fede Alvarez	Enquanto exploram as profundezas de uma estação espacial abandonada, um grupo de jovens colonizadores espaciais se depara com a forma de vida mais aterrorizante do universo.
+196	Babygirl	5.9	2024	Drama,Romance,Thriller	Halina Reijn	Uma executiva poderosa coloca a carreira e família em risco quando começa um caso tórrido com seu estagiário muito mais jovem.
+197	Capitão América: Admirável Mundo Novo	5.8	2025	Aventura,Ação,Sci-Fi	Julius Onah	Sam Wilson, o novo Capitão América, se vê no meio de um incidente internacional e deve descobrir o motivo por trás de um plano global nefasto.
+199	Conclave	7.4	2024	Drama,Thriller	Edward Berger	O Cardeal Lawrence é encarregado de liderar um dos eventos mais secretos e antigos do mundo, a seleção de um novo Papa, onde ele se encontra no centro de uma conspiração que pode abalar os próprios alicerces da Igreja.
+200	Código Preto	6.8	2024	Drama,Romance,Thriller	Steven Soderbergh	Quando uma agente de inteligência é suspeita de trair a nação, seu marido agente enfrenta o teste final para saber se deve ser leal ao seu casamento ou ao seu país.
+201	Deadpool & Wolverine	7.6	2024	Comédia Negra,Ação,Aventura,Comédia	Shawn Levy	Deadpool recebe uma oferta da Autoridade de Variância Temporal para se juntar ao Universo Cinematográfico Marvel, mas em vez disso recruta uma variante do Wolverine para salvar seu universo da extinção.
+202	Drop: Ameaça Anônima	6.5	2025	Drama,Thriller	Christopher Landon	Uma mãe viúva em seu primeiro encontro em anos, seu par é o mais charmoso e bonito do que ela esperava. Mas a química deles começa a estragar quando Violet começa a ficar aterrorizada por uma série de mensagens anônimas em seu telefone.
+203	Entre Montanhas	6.7	2025	Romance,Ação,Aventura,Sci-Fi,Horror	Scott Derrickson	Dois agentes altamente treinados se aproximam à distância após serem enviados para proteger lados opostos de um desfiladeiro misterioso. Quando um mal emerge, eles precisam trabalhar juntos para sobreviver ao que está lá dentro.
+204	Era Uma Vez em... Hollywood	7.6	2019	Comédia,Drama	Quentin Tarantino	Um ator de televisão apagado e seu dublê se esforçam para alcançar a fama e o sucesso na indústria cinematográfica durante os anos finais da Era de Ouro de Hollywood.
+208	Herege	7.0	2024	Horror,Thriller	Scott Beck,Bryan Woods	Duas jovens missionárias devotas acabam presas na casa de um homem misterioso. Elas são forçadas a participar de um jogo perturbador que desafia sua fé e põe em xeque tudo o que acreditam.
+209	Holland	5.0	2025	Thriller	Mimi Cave	Uma mulher suspeita que seu marido a está traindo e se arrisca a ter seu próprio caso, antes de descobrir a verdadeira e obscura vida secreta do marido.
+210	Jaat	7.0	2025	Ação,Drama,Thriller	Gopichand Malineni	Uma cidade fictícia atormentada pela injustiça e brutalidade, Jaat chega com a intenção de restaurar a justiça e salvar os aldeões.
+211	Jovens, Loucos e Rebeldes	7.6	1993	Comédia	Richard Linklater	As aventuras de alguns estudantes do ensino médio em seu último dia de aula em maio de 1976.
+212	Love	6.1	2015	Drama,Romance	Gaspar Noé	Murphy é um americano que mora em Paris e junto con sua instável namorada convidaram a sua vizinha a sua cama sem pensar nas consequências.
+213	Mickey 17	6.9	2025	Comédia Negra,Aventura,Comédia,Sci-Fi	Bong Joon Ho	Mickey é um "dispensável", um funcionário descartável em uma expedição humana enviada para colonizar o mundo gelado de Niflheim. Depois que uma iteração morre, um novo corpo é regenerado com a maioria de suas memórias.
+214	Nosferatu	7.2	2024	Horror	Robert Eggers	Um conto gótico de obsessão entre uma jovem assombrada na Alemanha do século XIX e o antigo vampiro da Transilvânia que a persegue, trazendo consigo um horror incalculável.
+215	Novocaine: À Prova de Dor	6.5	2025	Comédia Negra,Ação,Comédia,Thriller	Dan Berk,Robert Olsen	Quando a garota dos seus sonhos é sequestrada, um homem incapaz de sentir dor física transforma sua condição rara em uma vantagem inesperada na luta para resgatá-la.
+216	Não Fale o Mal	6.8	2024	Drama,Horror,Thriller	James Watkins	Uma família é convidada para passar um fim de semana inteiro em uma casa solitária no campo, mas à medida que o fim de semana avança, eles logo perceberão que a família que os convidou tem um lado sombrio dentro deles.
+217	O Brutalista	7.4	2024	Drama	Brady Corbet	Quando o visionário arquiteto László Toth e sua esposa Erzsébet fogem da Europa do pós-guerra em 1947 para reconstruir seu legado e testemunhar o nascimento da América moderna, suas vidas são mudadas por um misterioso e rico cliente.
+218	O Contador	7.3	2016	Ação,Crime,Drama,Thriller	Gavin OConnor	Enquanto um especialista em matemática desfaz os livros para um novo cliente, o Departamento do Tesouro fecha o cerco às suas atividades e a contagem de corpos começa a aumentar.
+219	O Contador 2	7.3	2025	Ação,Crime,Drama,Thriller	Gavin OConnor	Christian Wolff aplica sua mente brilhante e métodos não tão legais para montar o quebra-cabeça não resolvido do assassinato de um chefe do tesouro.
 \.
 
 
@@ -247,7 +279,7 @@ ALTER TABLE ONLY public.movies
     ADD CONSTRAINT movies_pkey PRIMARY KEY (id);
 
 
--- Completed on 2025-04-22 22:02:35
+-- Completed on 2025-04-23 17:08:42
 
 --
 -- PostgreSQL database dump complete
