@@ -16,6 +16,16 @@
       min-height: 100vh;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  word-wrap: break-word;
+  max-width: 200px;
+}
+
 .container {
   text-align: center;
   max-width: 900px;
@@ -104,8 +114,20 @@
       </td>
         <td style="padding: 8px; border: 1px solid #ccc;">{{ nota }}</td>
         <td style="padding: 8px; border: 1px solid #ccc;">{{ ano }}</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">{{ genero }}</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">{{ diretor }}</td>  
+        <td style="padding: 8px; border: 1px solid #ccc;">
+          {% for g in genero.split(',') %}
+            {% set g_limpado = g.strip() %}
+            <a href="/buscar?coluna=genero&q={{ g_limpado }}" style="text-decoration: none; color: inherit;">
+              {{ g_limpado }}{% if not loop.last %},{% endif %}
+            </a>{% if not loop.last %} {% endif %}
+          {% endfor %}
+        </td>        
+        <td style="padding: 8px; border: 1px solid #ccc;">
+          <a href="/buscar?coluna=diretor&q={{ diretor }}" style="text-decoration: none; color: inherit;">
+            {{ diretor }}
+          </a>
+               
+        </td>  
     </tr>
         {% endfor %}
     </tbody>
