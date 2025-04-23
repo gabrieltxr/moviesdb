@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-04-23 17:08:41
+-- Started on 2025-04-23 17:16:22
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -248,13 +248,12 @@ COPY public.movies (id, movie_name, imdb_score, movie_year, movie_genre, movie_d
 194	Acompanhante Perfeita	7.0	2025	Comédia Negra,Thriller,Sci-Fi	Drew Hancock	Um fim de semana entre amigos em uma cabana remota se transforma em caos após a revelação de que um dos hóspedes não é o que parece.
 195	Alien: Romulus	7.1	2024	Sci-Fi,Horror,Thriller	Fede Alvarez	Enquanto exploram as profundezas de uma estação espacial abandonada, um grupo de jovens colonizadores espaciais se depara com a forma de vida mais aterrorizante do universo.
 196	Babygirl	5.9	2024	Drama,Romance,Thriller	Halina Reijn	Uma executiva poderosa coloca a carreira e família em risco quando começa um caso tórrido com seu estagiário muito mais jovem.
-197	Capitão América: Admirável Mundo Novo	5.8	2025	Aventura,Ação,Sci-Fi	Julius Onah	Sam Wilson, o novo Capitão América, se vê no meio de um incidente internacional e deve descobrir o motivo por trás de um plano global nefasto.
 199	Conclave	7.4	2024	Drama,Thriller	Edward Berger	O Cardeal Lawrence é encarregado de liderar um dos eventos mais secretos e antigos do mundo, a seleção de um novo Papa, onde ele se encontra no centro de uma conspiração que pode abalar os próprios alicerces da Igreja.
 200	Código Preto	6.8	2024	Drama,Romance,Thriller	Steven Soderbergh	Quando uma agente de inteligência é suspeita de trair a nação, seu marido agente enfrenta o teste final para saber se deve ser leal ao seu casamento ou ao seu país.
-201	Deadpool & Wolverine	7.6	2024	Comédia Negra,Ação,Aventura,Comédia	Shawn Levy	Deadpool recebe uma oferta da Autoridade de Variância Temporal para se juntar ao Universo Cinematográfico Marvel, mas em vez disso recruta uma variante do Wolverine para salvar seu universo da extinção.
 202	Drop: Ameaça Anônima	6.5	2025	Drama,Thriller	Christopher Landon	Uma mãe viúva em seu primeiro encontro em anos, seu par é o mais charmoso e bonito do que ela esperava. Mas a química deles começa a estragar quando Violet começa a ficar aterrorizada por uma série de mensagens anônimas em seu telefone.
 203	Entre Montanhas	6.7	2025	Romance,Ação,Aventura,Sci-Fi,Horror	Scott Derrickson	Dois agentes altamente treinados se aproximam à distância após serem enviados para proteger lados opostos de um desfiladeiro misterioso. Quando um mal emerge, eles precisam trabalhar juntos para sobreviver ao que está lá dentro.
 204	Era Uma Vez em... Hollywood	7.6	2019	Comédia,Drama	Quentin Tarantino	Um ator de televisão apagado e seu dublê se esforçam para alcançar a fama e o sucesso na indústria cinematográfica durante os anos finais da Era de Ouro de Hollywood.
+197	Capitão América: Admirável Mundo Novo	5.8	2025	Super-Herói,Aventura,Ação,Sci-Fi	Julius Onah	Sam Wilson, o novo Capitão América, se vê no meio de um incidente internacional e deve descobrir o motivo por trás de um plano global nefasto.
 208	Herege	7.0	2024	Horror,Thriller	Scott Beck,Bryan Woods	Duas jovens missionárias devotas acabam presas na casa de um homem misterioso. Elas são forçadas a participar de um jogo perturbador que desafia sua fé e põe em xeque tudo o que acreditam.
 209	Holland	5.0	2025	Thriller	Mimi Cave	Uma mulher suspeita que seu marido a está traindo e se arrisca a ter seu próprio caso, antes de descobrir a verdadeira e obscura vida secreta do marido.
 210	Jaat	7.0	2025	Ação,Drama,Thriller	Gopichand Malineni	Uma cidade fictícia atormentada pela injustiça e brutalidade, Jaat chega com a intenção de restaurar a justiça e salvar os aldeões.
@@ -267,6 +266,7 @@ COPY public.movies (id, movie_name, imdb_score, movie_year, movie_genre, movie_d
 217	O Brutalista	7.4	2024	Drama	Brady Corbet	Quando o visionário arquiteto László Toth e sua esposa Erzsébet fogem da Europa do pós-guerra em 1947 para reconstruir seu legado e testemunhar o nascimento da América moderna, suas vidas são mudadas por um misterioso e rico cliente.
 218	O Contador	7.3	2016	Ação,Crime,Drama,Thriller	Gavin OConnor	Enquanto um especialista em matemática desfaz os livros para um novo cliente, o Departamento do Tesouro fecha o cerco às suas atividades e a contagem de corpos começa a aumentar.
 219	O Contador 2	7.3	2025	Ação,Crime,Drama,Thriller	Gavin OConnor	Christian Wolff aplica sua mente brilhante e métodos não tão legais para montar o quebra-cabeça não resolvido do assassinato de um chefe do tesouro.
+201	Deadpool & Wolverine	7.6	2024	Super-Herói,Comédia Negra,Ação,Comédia	Shawn Levy	Deadpool recebe uma oferta da Autoridade de Variância Temporal para se juntar ao Universo Cinematográfico Marvel, mas em vez disso recruta uma variante do Wolverine para salvar seu universo da extinção.
 \.
 
 
@@ -279,7 +279,7 @@ ALTER TABLE ONLY public.movies
     ADD CONSTRAINT movies_pkey PRIMARY KEY (id);
 
 
--- Completed on 2025-04-23 17:08:42
+-- Completed on 2025-04-23 17:16:22
 
 --
 -- PostgreSQL database dump complete
